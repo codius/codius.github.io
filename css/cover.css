@@ -173,3 +173,9 @@ p.lead {
 	color: #5cb85c;
 	text-shadow: none;
 }
+
+pre.prettyprint {
+    border: 1px solid #ccc;
+    margin-bottom: 0;
+    padding: 9.5px;
+  }
