@@ -181,3 +181,7 @@ pre.prettyprint {
     margin-bottom: 0;
     padding: 9.5px;
   }
+  
+.center {
+	text-align: center;
+}
