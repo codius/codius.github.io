@@ -175,6 +175,11 @@ img.logo {
 	border-radius: 5px;
 }
 
+.row.well {
+	color: #000;
+	text-shadow: none;
+}
+
 .cover-container {
 	text-align: left;
 }
