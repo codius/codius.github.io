@@ -165,6 +165,9 @@ body {
 
 /* Additional styling */
 
+.jumbotron h1, .jumbotron .h1 {
+	color: #000;
+}
 
 .cover-container {
 	text-align: left;
