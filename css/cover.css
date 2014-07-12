@@ -169,6 +169,12 @@ body {
 	color: #000;
 }
 
+img.logo {
+	border: 5px dotted #ccc;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 .cover-container {
 	text-align: left;
 }
