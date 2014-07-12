@@ -169,6 +169,10 @@ body {
 	color: #000;
 }
 
+.jumbotron {
+	padding-top: 20px;
+}
+
 img.logo {
 	border: 5px dotted #ccc;
 	padding: 5px;
