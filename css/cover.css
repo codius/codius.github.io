@@ -153,6 +153,7 @@ body {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
   
+/*   Jumbo font size */
   .jumbotron h1, .jumbotron .h1 {
   	font-size: 7em;
   	}
