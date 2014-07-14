@@ -177,6 +177,7 @@ body {
 .jumbotron h1, .jumbotron .h1 {
 	color: #000;
 	font-family: 'Monoton', cursive;
+	font-size: 100px;
 }
 
 .jumbotron {
