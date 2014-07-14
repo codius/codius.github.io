@@ -226,6 +226,7 @@ pre.prettyprint {
 code {
 	text-shadow: none;
 	background-color: #ccc;
+	color: #000;
 }
 
 .panel-body a {
