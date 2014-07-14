@@ -241,6 +241,12 @@ input#mce-EMAIL {
 	margin-bottom: 10px;
 }
 
+.navbar-form .form-control {
+display: inline-block;
+width: auto;
+vertical-align: middle;
+}
+
 .forum {
 	margin-top: 10px;
 }
