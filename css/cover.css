@@ -167,7 +167,7 @@ body {
   .masthead,
   /* .mastfoot, */
   .cover-container {
-    width: 700px;
+    width: 900px;
   }
 }
 
@@ -225,4 +225,21 @@ pre.prettyprint {
 
 code {
 	text-shadow: none;
+}
+
+.panel-body a {
+	color: #999;
+}
+
+.glyphicon-envelope, .glyphicon-pencil {
+	font-size: 65px;
+}
+
+input#mce-EMAIL {
+	margin-bottom: 10px;
+	
+}
+
+.forum {
+	margin-top: 10px;
 }
