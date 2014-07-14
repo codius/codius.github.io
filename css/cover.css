@@ -239,7 +239,11 @@ code {
 
 input#mce-EMAIL {
 	margin-right: 5px;
-	width: 115px;
+	width: 125px;
+}
+
+input#mc-embedded-subscribe {
+width: 125px;
 }
 
 .navbar-form .form-control {
