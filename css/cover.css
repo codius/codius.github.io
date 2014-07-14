@@ -223,3 +223,6 @@ pre.prettyprint {
 	text-align: center;
 }
 
+code {
+	text-shadow: none;
+}
