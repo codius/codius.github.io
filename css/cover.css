@@ -250,3 +250,9 @@ vertical-align: middle;
 .forum {
 	margin-top: 10px;
 }
+
+.prototype {
+	color: #000;
+	text-shadow: none;
+	font-style: italic;
+}
