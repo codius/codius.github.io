@@ -152,6 +152,10 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+  
+  .jumbotron h1, .jumbotron .h1 {
+  	font-size: 7em;
+  	}
 }
 
 @media (min-width: 992px) {
@@ -167,10 +171,11 @@ body {
 
 .jumbotron h1, .jumbotron .h1 {
 	color: #000;
+	font-family: 'Monoton', cursive;
 }
 
 .jumbotron {
-	padding-top: 20px;
+	padding-top: 40px;
 	-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 	box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
