@@ -238,7 +238,8 @@ code {
 }
 
 input#mce-EMAIL {
-	margin-bottom: 10px;
+	margin-right: 5px;
+	width: 115px;
 }
 
 .navbar-form .form-control {
