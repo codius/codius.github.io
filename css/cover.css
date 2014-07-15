@@ -233,13 +233,13 @@ code {
 .glyphicon-envelope, .glyphicon-comment {
 	font-size: 65px;
 	color: #aeaeae;
-
+	padding: 10px 0;
 }
 
 input#mce-EMAIL {
 	margin-right: 5px;
 	width: 125px;
-	border: 4px solid #428bca;
+	border: 2px solid #428bca;
 }
 
 input#mc-embedded-subscribe {
