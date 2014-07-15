@@ -161,6 +161,10 @@ body {
   .jumbotron h1, .jumbotron .h1 {
   	font-size: 24px;
   	}
+  	
+  	.jumbotron {
+  	padding-bottom: 30px;
+  	}
 }
 
 @media (min-width: 992px) {
@@ -174,35 +178,22 @@ body {
 
 /* Additional styling */
 
+html, body {overflow-x: hidden;} /* fix for slidein elements */
+
+
 .jumbotron h1, .jumbotron .h1 {
 	color: #000;
-	font-family: 'Monoton', cursive;
-	font-size: 100px;
+	font-family: 'Allerta Stencil', sans-serif;
+	font-size: 120px;
 }
 
 .jumbotron {
-	padding-top: 40px;
-	/* 
--webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-	box-shadow: inset 0 0 100px rgba(0,0,0,.5);
- */
+	padding-top: 30px;
 }
 
 img.logo {
 	margin: 5px 0;
 }
-
-/* 
-img.logo:hover {
-	-webkit-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	-ms-transform: rotate(360deg);
-	transform: rotate(360deg);
-	-webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-	-moz-transition: opacity 0.8s, -moz-transform 0.8s;
-	transition: opacity 0.8s, transform 0.8s;
-}
- */
 
 .row.well {
 	color: #000;
@@ -238,8 +229,10 @@ code {
 	color: #999;
 }
 
-.glyphicon-envelope, .glyphicon-pencil {
+.glyphicon-envelope, .glyphicon-comment {
 	font-size: 65px;
+	color: #aeaeae;
+
 }
 
 input#mce-EMAIL {
@@ -269,5 +262,10 @@ vertical-align: middle;
 }
 
 .acknowledgements {
+	margin-top: 15px;
+}
+
+.white-paper {
+	border-radius: 0px;
 	margin-top: 15px;
 }
