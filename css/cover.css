@@ -185,6 +185,7 @@ html, body {overflow-x: hidden;} /* fix for slidein elements */
 	color: #000;
 	font-family: 'Allerta Stencil', sans-serif;
 	font-size: 120px;
+	text-shadow: none;
 }
 
 .jumbotron {
