@@ -269,3 +269,11 @@ vertical-align: middle;
 	border-radius: 0px;
 	margin-top: 15px;
 }
+
+.community h2 {
+	font-weight: 100;
+}
+
+.well {
+	border-radius: 0px;
+}
