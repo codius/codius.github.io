@@ -120,6 +120,15 @@ body {
 @media (max-width: 480px) {
 
 	h1 {font-size:36px !important;}
+	
+	.wow {
+  		visibility: visible !important;
+ 		 -webkit-animation: none !important;
+   		 -moz-animation: none !important;
+       	 -o-animation: none !important;
+     	 -ms-animation: none !important;
+          animation: none !important;
+}
 }
 
 /*
