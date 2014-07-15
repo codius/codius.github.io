@@ -182,14 +182,17 @@ body {
 
 .jumbotron {
 	padding-top: 40px;
-	-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+	/* 
+-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 	box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+ */
 }
 
 img.logo {
 	margin: 5px 0;
 }
 
+/* 
 img.logo:hover {
 	-webkit-transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
@@ -199,6 +202,7 @@ img.logo:hover {
 	-moz-transition: opacity 0.8s, -moz-transform 0.8s;
 	transition: opacity 0.8s, transform 0.8s;
 }
+ */
 
 .row.well {
 	color: #000;
@@ -241,6 +245,7 @@ code {
 input#mce-EMAIL {
 	margin-right: 5px;
 	width: 125px;
+	border: 4px solid #428bca;
 }
 
 input#mc-embedded-subscribe {
