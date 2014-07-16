@@ -128,7 +128,20 @@ body {
        	 -o-animation: none !important;
      	 -ms-animation: none !important;
           animation: none !important;
+		}
+	.logo img {
+		width:50%;
+		height: 50%;
+	}
 }
+
+@media (max-width: 768px) {
+		
+		.logo img {
+		width:75%;
+		height: 75%;
+	}
+
 }
 
 /*
