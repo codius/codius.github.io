@@ -208,7 +208,7 @@ body {
 
 .jumbotron h1, .jumbotron .h1 {
 	color: #000;
-	font-family: 'Allerta Stencil', sans-serif;
+/* 	font-family: 'Allerta Stencil', sans-serif; */
 	font-size: 120px;
 	text-shadow: none;
 }
