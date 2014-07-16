@@ -121,14 +121,7 @@ body {
 
 	h1 {font-size:36px !important;}
 	
-	.wow {
-  		visibility: visible !important;
- 		 -webkit-animation: none !important;
-   		 -moz-animation: none !important;
-       	 -o-animation: none !important;
-     	 -ms-animation: none !important;
-          animation: none !important;
-		}
+	
 	.logo img {
 		width:50%;
 		height: 50%;
@@ -141,8 +134,18 @@ body {
 		width:75%;
 		height: 75%;
 	}
+	
+	.wow {
+  		visibility: visible !important;
+ 		 -webkit-animation: none !important;
+   		 -moz-animation: none !important;
+       	 -o-animation: none !important;
+     	 -ms-animation: none !important;
+          animation: none !important;
+		}
 
 }
+
 
 /*
  * Footer
@@ -200,7 +203,7 @@ body {
 
 /* Additional styling */
 
-html, body {overflow-x: hidden;} /* fix for slidein elements */
+/*html, body {overflow-x: hidden;}  fix for slidein elements */
 
 
 .jumbotron h1, .jumbotron .h1 {
