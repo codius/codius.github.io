@@ -248,7 +248,7 @@ code {
 input#mce-EMAIL {
 	margin-right: 5px;
 	width: 125px;
-	border: 2px solid #428bca;
+	border: 2px solid #008080;
 }
 
 input#mc-embedded-subscribe {
@@ -278,6 +278,13 @@ vertical-align: middle;
 .white-paper {
 	border-radius: 0px;
 	margin-top: 15px;
+	background-color: #008080;
+	border-color: #008080;
+}
+
+.white-paper:hover {
+	background-color: #04A5A0;
+	border-color: #04A5A0;
 }
 
 .community h2 {
