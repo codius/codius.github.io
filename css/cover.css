@@ -307,12 +307,6 @@ input#mc-embedded-subscribe {
 	border-radius: 0px;
 }
 
-#countdown {
-	text-align: center;
-	font-size: 1.5em;
-}
-
-
 /* Countdown Timers */
 .mobile-timer {
 		display: none;
