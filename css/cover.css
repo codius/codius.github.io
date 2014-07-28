@@ -311,3 +311,17 @@ input#mc-embedded-subscribe {
 	text-align: center;
 	font-size: 1.5em;
 }
+
+.mobile-timer {
+		display: none;
+	}
+	
+@media (max-width: 600px) {
+	.desktop-timer {
+		display: none;
+	}
+	
+	.mobile-timer {
+		display: block;
+	}
+}
