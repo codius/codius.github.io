@@ -54,18 +54,33 @@
 			<li><h4>Can interact with anything connected to the Internet </h4> </li>
 			<li><h4>Can encode any agreement you can encode as conditions and outcomes </h4></li>
 			 <p class="prototype center">Codius code and examples coming in:</p>
+			 
+			<!--  Mobile countdown timer -->
 			 <div class="mobile-timer" id="countdown"></div>
+			 <table class="mobile-timer" style="border:0px; margin:auto;width: 225px;">
+				<tr>
+					<td style="width:55px;">Days</td>
+					<td style="width:55px;">Hours</td>
+					<td style="width:55px;">Minutes</td>
+					<td style="width:55px;">Seconds</td>
+				</tr>
+				<tr>
+					<td colspan="4"><span id="mobile_countdown_timer"></span></td>
+				</tr>
+			</table>
+			 
+			 <!--  Desktop countdown timer -->
 			<table class="desktop-timer" style="border:0px; margin:auto;">
-		<tr>
-			<td style="width:110px;text-align:center;">Days</td>
-			<td style="width:120px;text-align:center;">Hours</td>
-			<td style="width:110px;text-align:center;">Minutes</td>
-			<td style="width:120px;text-align:center;">Seconds</td>
-		</tr>
-		<tr>
-			<td colspan="4"><span id="countdown_timer"></span></td>
-		</tr>
-	</table>
+				<tr>
+					<td style="width:110px;text-align:center;">Days</td>
+					<td style="width:120px;text-align:center;">Hours</td>
+					<td style="width:110px;text-align:center;">Minutes</td>
+					<td style="width:120px;text-align:center;">Seconds</td>
+				</tr>
+				<tr>
+					<td colspan="4"><span id="countdown_timer"></span></td>
+				</tr>
+			</table>
 		</ul>
         </div>	
       </div>
@@ -122,19 +137,16 @@
  		new WOW().init();
 	</script>
     <link href="css/animate.css" rel="stylesheet">
-    <script src="js/jquery.countdown.min.js"></script>
-	<script type="text/javascript">
-  		$('#countdown').countdown('2014/08/04', function(event) {
-   			$(this).html(event.strftime('%D days %H:%M:%S'));
-  		});
-	</script>
-	
 	<link rel="stylesheet" type="text/css" href="css/jquery.flipcountdown.css" />
 	<script type="text/javascript" src="js/jquery.flipcountdown.js"></script>
 	<script type="text/javascript">
 		jQuery(function($){
 				$('#countdown_timer').flipcountdown({
 					size:'lg',
+					beforeDateTime:'8/04/2014 00:00:00'
+				});
+				$('#mobile_countdown_timer').flipcountdown({
+					size:'sm',
 					beforeDateTime:'8/04/2014 00:00:00'
 				});
 		});
