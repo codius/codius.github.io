@@ -306,3 +306,8 @@ input#mc-embedded-subscribe {
 .well {
 	border-radius: 0px;
 }
+
+#countdown {
+	text-align: center;
+	font-size: 1.5em;
+}

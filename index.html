@@ -53,7 +53,8 @@
         	<li><h4>Can be written in any programming language </h4></li>
 			<li><h4>Can interact with anything connected to the Internet </h4> </li>
 			<li><h4>Can encode any agreement you can encode as conditions and outcomes </h4></li>
-			 <p class="prototype center">Codius code and examples coming soon</p>
+			 <p class="prototype center">Codius code and examples coming in:</p>
+			 <div id="countdown"></div>
 		</ul>
         </div>	
       </div>
@@ -110,6 +111,11 @@
  		new WOW().init();
 	</script>
     <link href="css/animate.css" rel="stylesheet">
-    
+    <script src="js/jquery.countdown.min.js"></script>
+	<script type="text/javascript">
+  		$('#countdown').countdown('2014/08/05', function(event) {
+   			$(this).html(event.strftime('%D days %H:%M:%S'));
+  		});
+	</script>
   </body>
 </html>
