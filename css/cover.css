@@ -312,11 +312,13 @@ input#mc-embedded-subscribe {
 	font-size: 1.5em;
 }
 
+
+/* Countdown Timers */
 .mobile-timer {
 		display: none;
 	}
 	
-@media (max-width: 600px) {
+@media (max-width: 580px) {
 	.desktop-timer {
 		display: none;
 	}
