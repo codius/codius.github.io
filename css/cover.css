@@ -307,6 +307,12 @@ input#mc-embedded-subscribe {
 	border-radius: 0px;
 }
 
+.git {
+	margin: auto;
+	padding: 10px 0 60px;
+	max-width: 550px; 
+}
+
 /* Countdown Timers */
 .mobile-timer {
 		display: none;
