@@ -313,6 +313,19 @@ input#mc-embedded-subscribe {
 	max-width: 550px; 
 }
 
+.chat {
+margin-top: 20px;
+}
+
+.chat_button {
+	color: #008080;
+}
+
+.chat_button:hover {
+	color: #04A5A0;
+	text-decoration: none;
+}
+
 /* Countdown Timers */
 .mobile-timer {
 		display: none;
