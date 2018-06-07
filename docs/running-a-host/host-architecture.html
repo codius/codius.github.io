@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Architecture - Codius Docs</title>
+  <title>Codius Host Architecture - Codius Docs</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -94,20 +94,18 @@
         </div>
       </div>
       <div class="main col-sm-9" role="main">
-        <h1 id="architecture">Architecture</h1>
-<p>Codius fits into the middle tier of the standard three-tier architecture:</p>
-<p><img src="/assets/img/docs/three-tier-architecture.png" alt="Codius 3-Tier Architecture"></p>
-<p>Previously, most distributed applications in the cryptocurrency community were written in such a way that clients interacted directly with ledgers/blockchains (databases). However, oftentimes applications need to interact with multiple clients, multiple ledgers/blockchains and other Internet services. An application logic layer is the ideal place to host such functionality.</p>
-<h1 id="how-codius-works">How Codius works</h1>
-<p>Codius is a hosting platform and accompanying client. We generally distinguish two roles:</p>
-<ul>
-<li><p><strong>Codius Hosts</strong> are companies or individuals who are looking to earn money by operating servers to host other people&#39;s applications. They use <a href="https://github.com/codius/codiusd"><code>codiusd</code></a> in order to provide the necessary APIs for uploading apps. <code>codiusd</code> also creates a <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/">pod</a> and the necessary amount of <a href="https://www.docker.com/what-container">containers</a>. These pods are granted access to a <a href="https://github.com/interledgerjs/moneyd">moneyd</a> instance that allows both the host and its pods to send and receive payments over <a href="https://interledger.org">Interledger</a>.</p>
-</li>
-<li><p><strong>Developers</strong> create applications and deploy them on top of Codius. They use <a href="https://github.com/codius/codius"><code>codius</code></a> to upload apps. The upload is accomplished via a <a href="https://github.com/codius/codius-manifest">manifest</a> that describes information about the program such as its name, version, environment variables, and a Docker image to pull. (Images are pulled from Dockerhub by default.)</p>
-</li>
-</ul>
-<p><a href="https://github.com/codius/codisud"> <code>codius-host</code></a> utilizes <a href="https://github.com/hyperhq/hyperd"><code>hyperd</code></a> in order to run applications isolated from each other and from the outside world.</p>
-<p><img src="/assets/img/docs/architecture-overview.png" alt="Architecture Diagram"></p>
+        <h1 id="codius-host-architecture">Codius Host Architecture</h1>
+<p>A Codius host is comprised of several components that allows it to perform its duties of hosting code in an isloated manner, and send and receive payments through itself and through the individual services that it is hosting. The main roles a Codius host plays is to create a space where each program that is uploaded can live, send and receive payments for itself and on behalf of any programs it is running in its pods, and to broadcast itself to the rest of the Codius network while building its own library of known Codius nodes.</p>
+<h2 id="hosting">Hosting</h2>
+<p>The main function of the Codius host is to create a place to run uploaded code, and then proxy connections to the uploaded code through itself. A host receives uploaded code in the form of a <a href="https://github.com/codius/codius-manifest">manifest</a>. The manifest contains information about the code such as its name, version, Docker Image, and environment variables. In addition to the manifest, the host also receives information on how long the uploader wishes to run the code and the necessary payment. The host then generates a hash from the uploaded manifest and converting it into what is called a pod spec. The hash is used to identify the manifest to the host and by extension, the outside world. The pod spec is passed to hyperd, which codiusd talks to in order to manage pods.</p>
+<h3 id="pods">Pods</h3>
+<p>A <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/">pod</a> creates a small hardware-isolated unit of computing that groups together <a href="https://www.docker.com/what-container">containers</a> within it. Containers that share a pod all share the same network, kernel, and storage, but are otherwise isolated from each other. A manifest file can describe multiple containers to be run in the pod that the Codius Host provisions for it.</p>
+<p>The pod is identified by the Codius host with the manifest hash, which is generated from the manifest itself. A pod can then have its runtime extended with queries using that hash to designate it to the host. The host also uses this hash to make its associated pod accessible by generating a URI of the format <code>MANIFEST_HASH.CODIUS_HOST_URI</code>. Using this URI, the host proxies requests on it to the designated pod.</p>
+<p>Pods are able to connect to the Interledger for payments by way of the Codius host exposing a port in the Pod&#39;s network, which passes data on that port to the Codius Host&#39;s own Interledger connection.</p>
+<h3 id="payments">Payments</h3>
+<p>Codius uses <a href="https://interledger.org">Interledger</a> to handle payments, implementing it by running the daemon <a href="https://github.com/interledgerjs/moneyd">moneyd</a>. It then extends payment functionality into its pods by exposing a port in each of them, which connects them to the Interledger network as well. With Interledger, a Codius host can accept payments to host programs, and any programs that are uploaded to the host that contain a contract can handle payments over Interledger.</p>
+<h3 id="peers">Peers</h3>
+<p>To aid in creating distributed applications, Codius hosts maintain a list of other Codius nodes on the network that is updated as new Codius hosts go live. They also broadcast themselves so that other hosts become aware of them.</p>
 
       </div>
     </div>
