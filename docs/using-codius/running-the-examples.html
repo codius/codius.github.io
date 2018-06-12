@@ -104,14 +104,20 @@
 <p>The first example is a simple nginx server:</p>
 <ul>
 <li><code>cd codius-examples/manifest/</code></li>
-<li><code>codius upload ./nginx-manifest.json --host http://local.codius.org:3000</code></li>
+<li><code>codius upload ./nginx-manifest.json --host https://codius.feraltc.com</code></li>
 </ul>
-<p><code>local.codius.org</code> is a domain that currently resolves to <code>127.0.0.1</code>, so it will point to your local codius host.</p>
+<p>Feel free to test this with some of the other hosts that the Codius team are running:</p>
+<ul>
+<li><code>https://codius.justmoon.com</code></li>
+<li><code>https://codius.tinypolarbear.com</code></li>
+<li><code>https://codius.risky.business</code></li>
+<li><code>https://codius.andros-connector.com</code></li>
+</ul>
 <p>You should get a response that looks something like this:</p>
 <pre><code>{ url:
-   &#39;http://MANIFEST_HASH.local.codius.org:3000/&#39;,
+   &#39;https://MANIFEST_HASH.codius.feraltc.com/&#39;,
   manifestHash: &#39;oooiikrql23xkjhvc6gobe7vjf5tiprodtmphqnwm7v3vx5g2csq&#39;,
-  host: &#39;http://local.codius.org:3000&#39;,
+  host: &#39;https://codius.feraltc.com&#39;,
   expiry: &#39;2018-06-05T20:52:02.068Z&#39;,
   expirationDate: &#39;06-05-2018 1:52:02 -0700&#39;,
   expires: &#39;a few seconds ago&#39;,
