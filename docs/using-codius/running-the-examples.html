@@ -107,23 +107,38 @@
 <li><code>cd codius-examples/manifest/</code></li>
 <li><code>codius upload ./nginx-manifest.json --host https://codius.feraltc.com</code></li>
 </ul>
-<p>Feel free to test this with some of the other hosts that the Codius team are running:</p>
-<ul>
-<li><code>https://codius.justmoon.com</code></li>
-<li><code>https://codius.tinypolarbear.com</code></li>
-<li><code>https://codius.risky.business</code></li>
-<li><code>https://codius.andros-connector.com</code></li>
-</ul>
 <p>You should get a response that looks something like this:</p>
 <pre><code>{ url:
    &#39;https://MANIFEST_HASH.codius.feraltc.com/&#39;,
-  manifestHash: &#39;oooiikrql23xkjhvc6gobe7vjf5tiprodtmphqnwm7v3vx5g2csq&#39;,
+  manifestHash: &#39;MANIFEST_HASH&#39;,
   host: &#39;https://codius.feraltc.com&#39;,
   expiry: &#39;2018-06-05T20:52:02.068Z&#39;,
   expirationDate: &#39;06-05-2018 1:52:02 -0700&#39;,
   expires: &#39;a few seconds ago&#39;,
   pricePaid: &#39;4&#39; }
 </code></pre><p>Notice the <code>url</code> field in the response. You can use this url to query the pod you just launched, and it should return the standard nginx welcome page.</p>
+<h2 id="create-react-app"><a href="https://github.com/codius/examples/blob/master/manifest/create-react-app-manifest.json">create-react-app</a></h2>
+<p>Another available example pod launches the bootstrap React App, <a href="https://github.com/codius/examples/blob/master/manifest/create-react-app-manifest.json">create-react-app</a>.</p>
+<ul>
+<li><code>cd codius-examples/manifest/</code></li>
+<li><code>codius upload ./create-react-app-manifest.json --host https://codius.feraltc.com</code></li>
+</ul>
+<p>As before, you should get a simliar response:</p>
+<pre><code>{ url:
+   &#39;https://MANIFEST_HASH.codius.feraltc.com/&#39;,
+  manifestHash: &#39;MANIFEST_HASH&#39;,
+  host: &#39;https://codius.feraltc.com&#39;,
+  expiry: &#39;2018-06-05T20:52:02.068Z&#39;,
+  expirationDate: &#39;06-05-2018 1:52:02 -0700&#39;,
+  expires: &#39;a few seconds ago&#39;,
+  pricePaid: &#39;4&#39; }
+</code></pre><p>Feel free to test these examples with some of the other hosts that the Codius team are running:</p>
+<ul>
+<li><code>https://codius.justmoon.com</code></li>
+<li><code>https://codius.tinypolarbear.com</code></li>
+<li><code>https://codius.risky.business</code></li>
+<li><code>https://codius.andros-connector.com</code></li>
+</ul>
 
       </div>
     </div>
